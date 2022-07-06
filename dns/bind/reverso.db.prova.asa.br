@@ -1,0 +1,18 @@
+; Todos os serviços estão no IP 10.25.1.223 
+; BIND reverse data file for broadcast zone
+;
+$TTL	604800
+@	IN	SOA	ns.prova.asa.br. root.prova.asa.br. (
+		 2022070501		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+;
+@	IN	NS	ns.prova.asa.br.
+
+223	    IN	    PTR		ns 
+223     IN      PTR     nginx
+223     IN      PTR     apache
+
+	
